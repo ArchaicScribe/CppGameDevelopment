@@ -4,7 +4,7 @@
 
 void InitLog()
 {
-	Log("Initialized Log");
+	Log("Initializing Log");
 }
 
 void Log(const char* message)
