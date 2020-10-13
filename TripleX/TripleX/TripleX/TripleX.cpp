@@ -7,9 +7,9 @@
 int main()
 {
 	//Printed out statements
-	std::cout << "A small child with great force powers is near you. You can sense it";
+	std::cout << "A small child with great force powers is near you. You can sense it....\n";
 	std::cout << std::endl;
-	std::cout << "Enter the correct code to continue...";
+	std::cout << "Enter the correct code to continue...\n\n";
 
 
 	//Declare 3 number code
@@ -23,24 +23,23 @@ int main()
 	
 	//Print sum and product to the terminal 
 	std::cout << std::endl;
-	std::cout << "There are 3 numbers in the code" << std::endl;
-	std::cout << "The code adds up to: " << CodeSum << std::endl;
-	std::cout << "The code multiplied equals: " << CodeProduct << std::endl;
+	std::cout << "There are 3 numbers in the code\n";
+	std::cout << "The code adds up to: " << CodeSum << "\n";
+	std::cout << "The code multiplied equals: " << CodeProduct << "\n"; 
 
 	int GuessA, GuessB, GuessC;
-	std::cin >> GuessA;
-	std::cin >> GuessB;
-	std::cin >> GuessC;
-
+	std::cin >> GuessA >> GuessB >> GuessC;
+	
 	int GuessSum = GuessA + GuessB + GuessC;
 	int GuessProduct = GuessA * GuessB * GuessC;
 
+	//Check to see if player's guess is correct!
 	if (GuessSum == CodeSum && GuessProduct == CodeProduct) 
 	{
-		std::cout << "You win! Congrats!";
+		std::cout << "You may enter the room, where the powerful being is sitting there. Looking up at you.";
 	}
 	else {
-		std::cout << "You lose!";
+		std::cout << "You lmay not enter the hut!";
 	}
 	
 
