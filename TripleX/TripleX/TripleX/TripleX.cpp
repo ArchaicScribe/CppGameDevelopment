@@ -7,12 +7,14 @@ int main()
 	std::cout << std::endl;
 	std::cout << "Enter the correct code to continue...";
 
-	int a = 3997;
-	int b = 3642;
-	int c = 3638;
+	const int a = 3997;
+	const int b = 3;
+	const int c = 3;
 
-	int sum = a + b + c;
-	int product = a * b * c;
+
+	const int sum = a + b + c;
+	const int product = a * b * c;
+	
 
 	std::cout << std::endl;
 	std::cout << sum;
