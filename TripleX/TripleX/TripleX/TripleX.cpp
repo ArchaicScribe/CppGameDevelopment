@@ -4,8 +4,66 @@
 #include <iostream>
 #include "TripleX.h"
 
-int main()
+
+
+
+
+void PrintIntroduction()
 {
+	
+	std::cout << "Welcome, to a galaxy far, far away... Where you are part of an ancient order, \ncalled Jedi...\n";
+	 /*           "  ._                                 "
+							  ",-'_ `-.                              "
+							  "::".^-. `.                            "
+							  ||<    >. \                           
+							  |: _, _| \ \                          
+							  : .'| '|  ;\`.                        
+							  _\ .`  '  | \ \                       
+							.' `\ *-'   ;  . \                      
+						   '\ `. `.    /\   . \                     
+						 _/  `. \  \  :  `.  `.;                    
+					   _/ \  \ `-._  /|  `  ._/                     
+					  / `. `. `.   /  :    ) \                      
+					  `;._.  \  _.'/   \ .' .';                     
+					  /     .'`._.* /    .-' (                      
+					.'`._  /    ; .' .-'     ;                      
+					; `._.:     |(    ._   _.'|                     
+					`._   ;     ; `.-'        |                     
+					 |   / .-'./ .'  \ .     /:                     
+					 |  +.'  \ `-.   .\ *--*' ;\                    
+					 ;.' `. \ `.    /` `.    /  .                   
+					/.L-'\_: L__..-*     \   ".  \                  
+				   :/ / .' `' ;   `-.     `.   \  .                 
+				   / /_/     /              \   ;  \                
+			  |  _/ /       /          \     `./    .               
+			`   .  ;       /    .'      `-.   ;      \              
+		   --  /  /  --   ,    /           `"' \      .             
+		  .   .  '       /   .'                 `.     \            
+			 /  /    `  /   /                  |  `-.   .           
+		--  .  '   \   /                         `.  `-._\          
+	   .   /  /       : `*.                    :   `.    `-.        
+		  .  '    `   |    \                    \    `-._   `-._    
+	 --  /  /   \     :     ;                    \              |   
+   .    .  '           ;                          `.  \      :  ;   
+	   /  /   `       : \    \                      `. `._  /  /    
+  --  .  '  \         |  `.   `.                      `-. `'  /\    
+	 /  .             ;         `-.              \       `-..'  ;   
+ `  .  '   `          |__                     |   `.         `-._.  
+_  :  /  \     [bug]    ;`-.                  :     `-.           ; 
+	`"  `               |   `.                 \       `*-.__.-*"' \
+' /  . \                ;_.  :`-._              `._                /
+					   /   `  . ; `"*-._                       _.-` 
+					 .'"'    _;  `-.__                     _.-`     
+					 `-.__.-"         `""---...___...--**"' |       
+												  `.____..--'*/
+
+
+}
+
+void PlayGame()
+{
+	PrintIntroduction();
+
 	//Printed out statements
 	std::cout << "A small child with great force powers is near you. You can sense it....\n";
 	std::cout << std::endl;
@@ -13,35 +71,39 @@ int main()
 
 
 	//Declare 3 number code
-	const int CodeA = 3;
+	const int CodeA = 4;
 	const int CodeB = 3;
-	const int CodeC = 3;
+	const int CodeC = 2;
 
 
 	const int CodeSum = CodeA + CodeB + CodeC;
-	const int CodeProduct = CodeA + CodeB + CodeC; 
-	
+	const int CodeProduct = CodeA + CodeB + CodeC;
+
 	//Print sum and product to the terminal 
 	std::cout << std::endl;
-	std::cout << "There are 3 numbers in the code\n";
-	std::cout << "The code adds up to: " << CodeSum << "\n";
-	std::cout << "The code multiplied equals: " << CodeProduct << "\n"; 
+	std::cout << "There are 3 numbers in the code";
+	std::cout << "\nThe code adds up to: " << CodeSum;
+	std::cout << "\nThe code multiplied equals: " << CodeProduct << std::endl;
 
 	int GuessA, GuessB, GuessC;
 	std::cin >> GuessA >> GuessB >> GuessC;
-	
+
 	int GuessSum = GuessA + GuessB + GuessC;
 	int GuessProduct = GuessA * GuessB * GuessC;
 
 	//Check to see if player's guess is correct!
-	if (GuessSum == CodeSum && GuessProduct == CodeProduct) 
+	if (GuessSum == CodeSum && GuessProduct == CodeProduct)
 	{
-		std::cout << "You may enter the room, where the powerful being is sitting there. Looking up at you.";
+		std::cout << "\nYou may enter the room, where the powerful being is sitting there. Looking up at you.";
 	}
 	else {
-		std::cout << "You lmay not enter the hut!";
+		std::cout << "\nYou may not enter the hut!";
 	}
-	
+}
 
+
+int main()
+{
+	PlayGame();
 	return 0;
 } 
