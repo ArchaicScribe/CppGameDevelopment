@@ -11,7 +11,7 @@
 void PrintIntroduction()
 {
 	
-	std::cout << "Welcome, to a galaxy far, far away... Where you are part of an ancient order, \ncalled Jedi...\n";
+	std::cout << "\n\nWelcome, to a galaxy far, far away... Where you are part of an ancient order, \ncalled Jedi...\n";
 	 /*           "  ._                                 "
 							  ",-'_ `-.                              "
 							  "::".^-. `.                            "
@@ -60,12 +60,12 @@ _  :  /  \     [bug]    ;`-.                  :     `-.           ;
 
 }
 
-void PlayGame()
+bool bPlayGame()
 {
 	PrintIntroduction();
 
 	//Printed out statements
-	std::cout << "A small child with great force powers is near you. You can sense it....\n";
+	std::cout << "\nA small child with great force powers is near you. You can sense it....\n";
 	std::cout << std::endl;
 	std::cout << "Enter the correct code to continue...\n\n";
 
@@ -95,15 +95,24 @@ void PlayGame()
 	if (GuessSum == CodeSum && GuessProduct == CodeProduct)
 	{
 		std::cout << "\nYou may enter the room, where the powerful being is sitting there. Looking up at you.";
+		return true;
 	}
 	else {
 		std::cout << "\nYou may not enter the hut!";
+		return false;
 	}
 }
 
 
 int main()
 {
-	PlayGame();
+	while (true) 
+	{
+		bool LevelComplete = bPlayGame;
+		bPlayGame();
+		std::cin.clear();//Clears any errors
+		std::cin.ignore();//Discards the buffer
+	}
+
 	return 0;
 } 
