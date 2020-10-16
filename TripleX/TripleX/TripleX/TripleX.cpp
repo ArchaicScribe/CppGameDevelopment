@@ -8,10 +8,11 @@
 
 
 
-void PrintIntroduction()
+void PrintIntroduction(int Difficulty)
 {
 	
 	std::cout << "\n\nWelcome, to a galaxy far, far away... Where you are part of an ancient order, \ncalled Jedi...\n";
+	std::cout << "You are on level " << Difficulty;
 	 /*           "  ._                                 "
 							  ",-'_ `-.                              "
 							  "::".^-. `.                            "
@@ -60,9 +61,9 @@ _  :  /  \     [bug]    ;`-.                  :     `-.           ;
 
 }
 
-bool bPlayGame()
+bool PlayGame(int Difficulty)
 {
-	PrintIntroduction();
+	PrintIntroduction(Difficulty);
 
 	//Printed out statements
 	std::cout << "\nA small child with great force powers is near you. You can sense it....\n";
@@ -106,12 +107,18 @@ bool bPlayGame()
 
 int main()
 {
+	int LevelDifficulty = 1;
+
 	while (true) 
 	{
-		bool LevelComplete = bPlayGame;
-		bPlayGame();
+		bool bLevelComplete = PlayGame(LevelDifficulty);
 		std::cin.clear();//Clears any errors
 		std::cin.ignore();//Discards the buffer
+
+		if (bLevelComplete)
+		{
+			++LevelDifficulty;
+		}
 	}
 
 	return 0;
